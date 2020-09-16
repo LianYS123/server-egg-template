@@ -1,0 +1,21 @@
+.cloud-report-reportEdit {
+  // 默认的min-height: 350px会影响编辑新建图表页
+  .ant-tabs-content {
+    min-height: auto;
+  }
+  // antd 取消了该样式，故手动加上
+  .cloud-report-datamodel .ant-table-scroll table {
+    width: auto;
+  }
+  
+}
+.boot-setting-report {
+// 浅色无边框，所以需要加深底色以便区分
+  .ant-tabs-tabpane  {
+    background-color: #EEF3FA;
+  }
+  // tree的背景颜色清除
+  .cloud-report-leftTree .ant-tree li .ant-tree-node-content-wrapper:hover .tree-node-controls {
+    background: none;
+  }
+}

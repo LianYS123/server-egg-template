@@ -1,0 +1,135 @@
+.ant-btn-primary {
+  background-color: @BtnColor;
+  color: #fff;
+  &:hover {
+    background-color: @BtnHover;
+  }
+}
+
+.ant-radio-wrapper {
+  font-size: 14px;
+}
+
+.ant-btn-hover() {
+  color: @BtnColor;
+}
+
+.ant-btn {
+  font-size: @baseFontSize;
+  display: inline-block;
+  margin-bottom: 0;
+  font-weight: 400 !important;
+  &:hover:not(.ant-btn-primary),
+  &:hover:not[disabled] {
+    .ant-btn-hover;
+  }
+}
+
+.ant-btn-link {
+  color: @BtnColor;
+}
+
+.ant-btn-danger:hover,
+.ant-btn-danger:focus,
+.ant-btn-danger:active {
+  color: #fff !important;
+  background-color: #f23400;
+  border-color: #f23400;
+}
+.ant-btn-background-ghost.ant-btn-danger:hover,
+.ant-btn-background-ghost.ant-btn-danger:focus,
+.ant-btn-background-ghost.ant-btn-danger:active {
+  color: #ff7875 !important;
+}
+.ant-btn-danger[disabled] {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+.ant-btn-danger[disabled]:hover,
+.ant-btn-danger[disabled]:focus,
+.ant-btn-danger[disabled]:active {
+  color: rgba(0, 0, 0, 0.25) !important;
+}
+
+.ant-btn-primary.disabled,
+.ant-btn-primary[disabled],
+.ant-btn-primary.disabled:hover,
+.ant-btn-primary[disabled]:hover,
+.ant-btn-primary.disabled:focus,
+.ant-btn-primary[disabled]:focus,
+.ant-btn-primary.disabled:active,
+.ant-btn-primary[disabled]:active,
+.ant-btn-primary.disabled.active,
+.ant-btn-primary[disabled].active {
+  color: @BtnDisabledFont !important;
+  background-color: @BtnDisabledBg;
+  border-color: @BtnDisabledBorder;
+}
+
+.ant-checkbox.ant-checkbox-disabled {
+  .ant-checkbox-inner {
+    color: @BtnDisabledFont !important;
+    background-color: @BtnDisabledBg;
+    border-color: @BtnDisabledBorder;
+    position: relative;
+  }
+}
+
+.operate_btns {
+  margin-bottom: 8px;
+}
+// 灰色背景 白色icon + - button
+.dynamic-delete-button {
+  background: @grayLight 100%;
+  border-color: @grayLight;
+  color: #fff;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  position: absolute;
+  left: 0;
+  top: -7px;
+  &:not([disabled]){
+    &:hover, &:active, &:focus{
+      background: @grayLight !important;
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+  }
+}
+.dynamic-add-device-button {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  position: absolute;
+  right: 0;
+  top: -7px;
+}
+.dynamic-add-button {
+  background: @grayLight 100%;
+  border-color: @grayLight;
+  color: #fff;
+  &:not([disabled]){
+    &:hover, &:active, &:focus{
+      background: @grayLight !important;
+      color: #fff !important;
+      border-color: #fff !important;
+    }
+  }
+}
+
+// group
+.ant-btn + .ant-btn-group,
+.ant-btn-group + .ant-btn,
+.ant-btn-group + .ant-btn-group,
+.ant-btn-group .ant-btn + .ant-btn,
+.ant-btn-group .ant-btn + span,
+.ant-btn-group > span + span,
+.ant-btn-group span + .ant-btn {
+  margin-top: 1px;
+}
+
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
+.ant-radio-group-solid
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+  background: @BtnColor;
+  border-color: @BtnColor;
+}

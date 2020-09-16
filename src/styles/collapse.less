@@ -1,0 +1,26 @@
+// .ant-collapse {
+//   >.ant-collapse-item {
+//     margin-bottom: 17px;
+//   }
+// }
+.ant-collapse-borderless {
+  background: none;
+  > .ant-collapse-item {
+    > .ant-collapse-header:hover {
+      background-color: @TableBodyHover;
+    }
+    > .ant-collapse-content {
+      overflow: scroll;
+    }
+  }
+}
+
+.ant-collapse-extra {
+  font-size: 12px;
+}
+
+.ant-collapse-content {
+  &-box {
+    position: relative;
+  }
+}

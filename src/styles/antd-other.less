@@ -1,0 +1,118 @@
+.ant-radio-group-gray {
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled),
+  .ant-radio-button-wrapper-checked:not(.ant-radio-button-wrapper-disabled):hover {
+    background: @gray;
+    border-color: @gray;
+    color: #fff;
+    box-shadow: -1px 0 0 0 @gray;
+  }
+  .ant-radio-button-wrapper {
+    background: @blueLight;
+    color: @grayLight;
+    z-index: 1;
+  }
+  .ant-radio-button-wrapper:first-child {
+    border-radius: 8px 0 0 8px;
+  }
+  .ant-radio-button-wrapper:last-child {
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.ant-breadcrumb {
+  font-size: 14px;
+  position: absolute;
+  left: 16px;
+  width: 180px;
+  display: flex;
+
+  > a {
+    line-height: 40px;
+  }
+
+  span {
+    line-height: 40px;
+  }
+}
+
+.ant-table-title,
+.ant-table-footer {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.ant-alert {
+  white-space: pre-wrap;
+}
+
+.ant-menu-item {
+  margin: 0 !important;
+}
+
+.ant-advanced-search-form {
+  margin-bottom: 10px;
+  background: @SearchBg;
+  padding: 16px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  border: 1px solid @SraechBorder;
+  .ant-form-item {
+    margin-bottom: 8px !important;
+  }
+}
+
+.ant-confirm-body .ant-confirm-content {
+  word-break: break-all;
+}
+.ant-checkbox-indeterminate {
+  .ant-checkbox-inner {
+    background: transparent;
+    border: 1px solid #d8d8d8;
+  }
+}
+
+// #div .ant-table-tbody > tr {
+//   height: 50px !important;
+//   > td {
+//     height: 50px !important;
+//     word-break: keep-all;
+//     white-space: nowrap;
+//     overflow: hidden;
+//     -ms-text-overflow: ellipsis;
+//     text-overflow: ellipsis;
+//   }
+// }
+
+.ant-checkbox-wrapper {
+  padding: 8px;
+  .ant-table-placeholder {
+    background: #fff !important;
+  }
+}
+
+.ant-table-tbody > tr:hover {
+  .compose-column > div:nth-of-type(1) > a,
+  .compose-column > a {
+    color: @blueDark;
+  }
+}
+
+.ant-slider-track {
+  background-color: @blueDark;
+}
+
+.ant-transfer-list-header {
+  padding: 0;
+  &-title {
+    top: 7px;
+    color: @gray;
+  }
+}
+
+.ant-notification-notice-with-icon .ant-notification-notice-message {
+  white-space: pre-wrap;
+}
+
+.ant-drawer-close {
+  z-index: 7; // 默认的10会悬浮在全屏模式的codeMirror（z-index:9）之上
+}

@@ -1,0 +1,66 @@
+@import '~styles/variable.less';
+
+.empty-container {
+  text-align: center;
+  height: ~'calc(100vh - 186px)';
+  padding-top: 126px;
+  position: relative;
+
+  &.pure {
+    padding-top: 0;
+    height: auto;
+    .empty-container-title {
+      font-size: 18px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &-title {
+    color: @grayLight;
+    font-size: 24px;
+    margin-bottom: 46px;
+    font-weight: normal;
+  }
+
+  &-count {
+    position: absolute;
+    left: 20px;
+    top: 0;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: @TableBorder 28px solid;
+    border-top: @TableBorder 28px solid;
+    border-bottom: transparent 28px solid;
+    border-right: transparent 28px solid;
+    &-text {
+      position: absolute;
+      z-index: 2;
+      left: -28px;
+      top: -28px;
+      color: @grayLight;
+      width: 56px;
+      height: 56px;
+      text-align: left;
+      padding: 4px 11px;
+      font-size: 18px;
+    }
+  }
+
+  :global {
+    .ant-card {
+      color: #4c5a71;
+      background: #f6f7f8;
+      height: 144px;
+      vertical-align: middle;
+      display: table;
+      width: 100%;
+      font-weight: bold;
+      
+      .ant-card-body {
+        display: table-cell;
+        vertical-align: middle;
+      }
+    }
+  }
+}

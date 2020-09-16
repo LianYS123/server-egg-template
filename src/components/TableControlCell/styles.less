@@ -1,0 +1,39 @@
+.table-controls {
+  > * {
+    padding: 0 8px;
+    border-right: solid 1px #ccc;
+    font-size: 12px !important;
+
+    &:last-child {
+      border-right: none;
+    }
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  &-has-children {
+    :global {
+      .ant-dropdown-menu-item {
+        font-size: 12px;
+      }
+    }
+  }
+
+  :global {
+    .disabled {
+      color: #c1c1c1;
+      cursor: not-allowed;
+    }
+  }
+} 
+
+.table-controls-test {
+  > * {
+    width: 45px;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 3px !important;
+    text-align: center;
+  }
+}

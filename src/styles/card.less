@@ -1,0 +1,80 @@
+.ant-card-actions {
+  border-top: 1px solid @TableBorder;
+  background: rgba(226, 231, 236, 0.4);
+  zoom: 1;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-radius: 4px;
+}
+
+.ant-card-actions:before,
+.ant-card-actions:after {
+  content: "";
+  display: table;
+}
+
+.ant-card-actions:after {
+  clear: both;
+}
+
+.ant-card-head {
+  padding: 0 16px;
+  height: 48px;
+  border-bottom: 1px solid @TableBorder;
+  color: @purple;
+  font-weight: 500;
+}
+.ant-card-actions > li {
+  float: left;
+  text-align: center;
+  margin: 8px 0;
+  color: #4c5a7e;
+}
+
+.ant-card-actions > li > span {
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 22px;
+  min-width: 32px;
+  position: relative;
+}
+
+.ant-card-actions > li > span:hover {
+  color: #0d7aff;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.ant-card-actions > li > span > .anticon {
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.ant-card-actions > li > span a {
+  color: rgba(0, 0, 0, 0.45);
+  line-height: 22px;
+  display: inline-block;
+  width: 100%;
+}
+
+.ant-card-actions > li > span a:hover {
+  color: #1890ff;
+}
+
+.ant-card-actions > li:not(:last-child) {
+  border-right: 1px solid @TableBorder;
+}
+
+.ant-card-extra {
+  color: #4c5a7e;
+}
+
+.card-content-label {
+  color: #a5afbc;
+}
+
+.ant-card-body {
+  padding: 16px !important;
+}

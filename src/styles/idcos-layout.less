@@ -1,0 +1,264 @@
+html,
+body {
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  color: @SubTitle !important;
+}
+h1,
+h2 {
+  color: @Title !important;
+}
+.page {
+  background: @white;
+  overflow-y: auto;
+  font-size: @baseFontSize;
+  overflow-x: hidden;
+  height: 100%;
+  .page-header {
+    border-bottom: solid 1px #c4cdd7;
+    height: 50px;
+    position: relative;
+    padding: 9px 16px 9px 180px;
+    h1 {
+      color: @Title;
+      font-size: 18px;
+      font-weight: 700;
+      position: absolute;
+      left: 16px;
+      line-height: 36px;
+    }
+  }
+  .page-body {
+    padding: 8px 16px 16px 16px;
+    box-sizing: border-box;
+    min-height: ~'calc(100% - 50px)';
+    position: relative;
+  }
+  .page-header-50 {
+    height: 50px;
+  }
+  .page-body-title {
+    color: @Title;
+    font-size: 18px;
+    font-weight: 700;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 24px;
+  }
+}
+// 页面结构为左边列表，右边主题内容
+.page-contianer {
+  display: flex;
+}
+.page-tree {
+  width: 180px;
+  min-height: ~'calc(100vh - 110px)';
+  overflow-y: auto;
+  position: relative;
+  border-right: 1px solid #c4cdd7;
+  margin-right: -1px;
+  z-index: 10;
+  background: #fff;
+  &:after {
+    content: '';
+    position: absolute;
+    width: 1px;
+    height: 50px;
+    top: -50px;
+    right: 0;
+  }
+  .li.active {
+    background: #e1efff;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 2px;
+      height: 100%;
+      background: @blueDark;
+      right: 0;
+      top: 0;
+    }
+  }
+  .li-order {
+    height: 36px;
+    line-height: 36px;
+    text-align: right;
+    padding: 0 12px;
+  }
+  .li {
+    height: 36px;
+    line-height: 36px;
+    color: @gray;
+    position: relative;
+    padding: 0 12px;
+
+    cursor: pointer;
+    .setting-btn {
+      top: 11px;
+      display: none;
+      position: absolute;
+      right: 12px;
+    }
+    .menu-btn {
+      top: 11px;
+      position: absolute;
+      right: 12px;
+    }
+    &:hover {
+      background: #e1efff;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 2px;
+        height: 100%;
+        background: @blueDark;
+        right: 0;
+        top: 0;
+      }
+      .setting-btn {
+        display: block;
+      }
+    }
+  }
+  .li-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  .li-operation {
+    display: flex;
+    height: 36px;
+    align-items: center;
+    &:hover {
+      background: #e1efff;
+    }
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+    input {
+      background: #f5f7fa;
+      border: 0;
+    }
+    .li-operation-btn {
+      margin-left: 12px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  .add-group-btn {
+    display: block;
+    bottom: 0;
+    position: fixed;
+    height: 44px;
+    width: 180px;
+    text-align: center;
+    color: @gray;
+    cursor: pointer;
+    line-height: 44px;
+    border-right: 1px solid #c4cdd7;
+    &:hover {
+      color: @blueDark;
+    }
+  }
+  // 有选择框的样式
+  .ant-checkbox-wrapper {
+    width: 100%;
+    + .ant-checkbox-wrapper {
+      margin-left: 0;
+    }
+    .ant-checkbox + span {
+      display: inline-block;
+      width: calc(100% - 16px);
+    }
+    // 去掉原先的hover样式，改为给checkbox样式
+    &:hover {
+      background: #e1efff;
+    }
+    .li {
+      &:hover {
+        background: none;
+        &:after {
+          content: none;
+        }
+      }
+      &.active:after {
+        content: none;
+      }
+    }
+  }
+}
+.page-body-with-tree {
+  flex: 1;
+  position: relative;
+  top: -50px;
+  min-height: ~'calc(100% - 60px)';
+  overflow-y: auto;
+  border-left: 1px solid #c4cdd7;
+  .ant-tabs-bar {
+    border-bottom: 0;
+  }
+  .ant-tabs-nav-scroll {
+    padding-left: 16px;
+  }
+}
+
+.approot {
+  height: 100%;
+  overflow: auto;
+  background-color: #d8d8d8;
+  font-size: 14px;
+  .app-container {
+    height: ~'calc(100vh - 60px)';
+    overflow-y: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    box-sizing: border-box;
+    .app-body-main {
+      height: 100%;
+      box-sizing: border-box;
+      overflow-y: auto;
+      background-color: #f7f7f7;
+      -ms-flex: 1 1 auto;
+      flex: 1 1 auto;
+      .app-body-content {
+        // 详情页
+        .approot-innder-detail {
+          padding: 16px 16px 48px;
+          overflow-y: auto;
+          box-sizing: border-box;
+          height: ~'calc(100vh - 60px)';
+          -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+        }
+
+        // 主页面
+        // 没有数的情况下
+        .approot-inner {
+          overflow-y: hidden;
+          box-sizing: border-box;
+          .approot-inner-content {
+            overflow-y: auto;
+            background-color: @bg;
+            border-radius: 4px;
+            height: ~'calc(100vh - 60px)';
+            overflow-x: hidden;
+            box-sizing: border-box;
+          }
+        }
+        // 有树的情况下
+        .approot-hasTree-inner {
+          position: relative;
+          display: -webkit-box;
+          display: -webkit-flex;
+          display: -ms-flexbox;
+          display: flex;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.ant-tabs-nav-container {
+  font-size: @baseFontSize;
+  .ant-tabs-nav {
+    .ant-tabs-ink-bar {
+      background-color: @TabPaneSelected;
+    }
+    .ant-tabs-tab-active {
+      color: @TabPaneSelected;
+    }
+  }
+  .ant-tabs-tab {
+    color: @TabPaneFont;
+  }
+}
+
+.ant-tabs-content {
+  min-height: 350px; //防止搜索下拉框不可见
+}

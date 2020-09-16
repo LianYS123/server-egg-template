@@ -1,0 +1,129 @@
+@import "~styles/variable.less";
+
+.grid-table {
+  :global {
+    // 去除原来td,th,checkow的样式
+    .ant-table-tbody > tr > td,
+    .ant-table-thead > tr > th {
+      border-bottom: none;
+    }
+    .ant-table-tbody > tr > td {
+      padding: 0;
+    }
+    .ant-table-tbody > tr.ant-table-row-selected td {
+      background: none !important;
+    }
+    .ant-table-tbody
+      > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+      > td,
+    .ant-table-tbody
+      > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+      > td,
+    .ant-table-thead
+      > tr.ant-table-row-hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+      > td,
+    .ant-table-thead
+      > tr:hover:not(.ant-table-expanded-row):not(.ant-table-row-selected)
+      > td {
+      background: none !important;
+    }
+    .ant-table-tbody
+      .ant-table-row[class*="ant-table-row-level-0"]
+      .ant-table-selection-column
+      > span {
+      width: 100%;
+    }
+    // 有border的部分
+    .ant-table-tbody .ant-checkbox-wrapper {
+      padding: 0;
+      height: 72px;
+      line-height: 72px;
+      border: 1px solid @TableBorder;
+      border-right: 0;
+      border-top-left-radius: 4px;
+      border-bottom-left-radius: 4px;
+      margin-top: 6px;
+      width: 100%;
+    }
+    .td-wrapper {
+      height: 72px;
+      line-height: 72px;
+      border-bottom: 1px solid @TableBorder;
+      border-top: 1px solid @TableBorder;
+      margin-top: 6px;
+    }
+
+    // 首行
+    .ant-table-tbody > tr:first-child {
+      .ant-checkbox-wrapper,
+      .td-wrapper {
+        margin-top: 12px;
+      }
+    }
+
+    // 首列
+    .ant-table-tbody > tr > td:first-child {
+      .td-wrapper {
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+        border-left: 1px solid @TableBorder;
+      }
+    }
+
+    // 末列
+    .ant-table-tbody > tr > td:last-child {
+      .td-wrapper {
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+        border-right: 1px solid @TableBorder;
+      }
+    }
+
+    // selected, hover
+    .ant-table-tbody > tr {
+      &.ant-table-row-selected {
+        .ant-checkbox-wrapper,
+        .td-wrapper {
+          background: rgba(0, 114, 255, 0.1);
+        }
+      }
+      &:hover {
+        .ant-checkbox-wrapper,
+        .td-wrapper {
+          background: #e6f7ff;
+        }
+
+        .list-name {
+          color: @blueDark;
+        }
+      }
+    }
+
+    .list-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: @purple;
+    }
+  }
+}
+
+.expand-table {
+  :global {
+    .ant-table-thead > tr > th {
+      height: 48px;
+    }
+    .ant-table-tbody > tr > td {
+      height: 64px;
+    }
+    .list-name {
+      font-size: 16px;
+      font-weight: 500;
+      color: @purple;
+    }
+    .ant-table-tbody > tr:hover {
+      .list-name {
+        color: @blueDark;
+      }
+    }
+  }
+}

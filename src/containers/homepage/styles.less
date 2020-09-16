@@ -1,0 +1,167 @@
+@import '~styles/variable.less';
+
+.chart {
+  height: 290px;
+}
+
+
+// 告警数量趋势
+.homepage-line {
+  :global {
+    // 去除边框
+    .ant-radio-button-wrapper {
+      border: none;
+      border-radius: 8px;
+      padding: 0 8px;
+      margin: 0 7px;
+      font-size: 12px;
+      box-shadow: none;
+      height: 24px;
+      line-height: 24px;
+
+      // 去除hover,foucs时的样式
+      &-checked:not(.ant-radio-button-wrapper-disabled) {
+        &:focus-within{
+          outline: none;
+        }
+        border: none;
+        box-shadow: none;
+      }
+      // 去除左边border
+      &:not(:first-child):before {
+        content: none;
+      }
+    }
+  }
+}
+
+// 告警级别趋势
+.homepage-radar {
+  .chart-head-extra {
+    position: absolute;
+    right: 16px;
+    top: 16px;
+  }
+}
+@media (max-width: 1200px) {
+  .homepage-line {
+    .chart {
+      height: 322px; // 屏幕缩小时：需要跟换行后的高度对齐
+    }
+  }
+
+  .homepage-radar .chart-head-extra {
+    position: inherit;
+  }
+}
+
+:global {
+  // 各统计总数
+  
+  .dashbord-blocks {
+    display: flex;
+    flex-direction: column;
+    height: 330px;
+    padding-top: 6px;
+    .ant-col-8 {
+      text-align: center;
+    }
+    .count-num {
+      font-size: 20px;
+      line-height: 44px;
+      color: @grayLight;
+      font-weight: bold;
+    }
+    .count-text {
+      font-size: 14px;
+      line-height: 44px;
+      color: @gray;
+    }
+    .divider {
+      width: 100%;
+      height: 1px;
+      background: @TableBorder;
+      margin: 6px 0 22px;
+    }
+    .block-title {
+      font-size: 16px;
+      line-height: 26px;
+      color: @purple;
+      font-weight: 500;
+    }
+    .block-parent {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      margin-bottom: 10px;
+      .block {
+        text-align: center;
+        p {
+          font-size: 20px;
+          line-height: 44px;
+          color: @grayLight;
+          font-weight: bold;
+        }
+        div {
+          font-size: 14px;
+          line-height: 44px;
+          color: @gray;
+        }
+      }
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  // 占比
+  .progeress-block {
+    position: relative;
+    .block {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .title {
+        font-size: 16px;
+        line-height: 26px;
+        color: @purple;
+        font-weight: 500;
+      }
+      .total {
+        color: @grayLight;
+        font-size: 12px;
+      }
+      .use {
+        font-size: 16px;
+        .unit {
+          font-size: 12px;
+        }
+      }
+    }
+    .percent {
+      color: @grayLight;
+      font-size: 12px;
+      text-align: right;
+    }
+    // 切换的icon
+    .icon-retweet {
+      position: absolute;
+      top: 7px;
+      left: 70px;
+      width: 13px;
+      height: 13px;
+      cursor: pointer;
+    }
+  }
+
+  .dashbord-static-number {
+    font-size: 30px;
+    color: @gray;
+    font-weight: 500;
+  }
+
+  .dashbord-static-text {
+    font-size: 12px;
+    color: @grayLight;
+  }
+}

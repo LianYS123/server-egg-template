@@ -1,0 +1,256 @@
+.app-body-nav {
+  height: ~"calc(100vh - 60px)";
+  position: relative;
+  transition: all 0.1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  overflow-y: hidden;
+  &::-webkit-scrollbar {
+    display: none !important;
+  }
+  &::-moz-scrollbar {
+    display: none !important;
+  }
+  &::-o-scrollbar {
+    display: none !important;
+  }
+  .ant-menu-dark {
+    height: ~"calc(100vh - 60px)";
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none !important;
+    }
+    &::-moz-scrollbar {
+      display: none !important;
+    }
+    &::-o-scrollbar {
+      display: none !important;
+    }
+  }
+
+  .ant-menu-inline .ant-menu-item {
+    height: 36px;
+    line-height: 36px;
+  }
+  :root .ant-menu-submenu-inline > .ant-menu-submenu-title:after {
+    font-size: 14px;
+  }
+  .ant-menu.ant-menu-dark .ant-menu-item-selected {
+    background-color: @NavSelected;
+  }
+  .menu-show-hide-btn {
+    height: 38px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    z-index: 1;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 9px;
+  }
+  .app-body-nav-btn {
+    border-top: 1px solid #30589e;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1px rgba(25, 50, 92, 1);
+    z-index: 1;
+    .app-body-nav-uncollapsed {
+      text-align: center;
+      margin: 0 auto;
+      color: @white;
+      padding-top: 4px;
+    }
+    .app-body-nav-collapsed {
+      text-align: center;
+      margin: 0 auto;
+      color: @white;
+      font-size: 12px;
+      padding-top: 3px;
+    }
+  }
+  .ant-menu-inline-collapsed {
+    width: 50px;
+  }
+  .ant-menu-inline-collapsed .ant-menu-submenu-title .iconfont + span {
+    max-width: 0;
+    display: inline-block;
+    opacity: 0;
+  }
+  .ant-menu-inline-collapsed > .ant-menu-item .iconfont + span {
+    max-width: 0;
+    display: inline-block;
+    opacity: 0;
+  }
+  // tooltip 样式 在外面找
+  //.ant-menu-inline-collapsed-tooltip .ant-tooltip-inner {
+  //  background-color: @NavbarHoverBackground !important;
+  //}
+  //.ant-menu-inline-collapsed-tooltip .ant-tooltip-inner a {
+  //  color: #f7fbff;
+  //}
+  .ant-menu-submenu-open .ant-menu-sub .ant-menu-item {
+    background: @NavbarHoverBackground;
+  }
+  // .ant-menu-submenu-open .ant-menu-sub .ant-menu-item a {
+  //   color: @NavFont;
+  // }
+  .ant-menu-sub.ant-menu-inline .ant-menu-item-selected {
+    background: @NavSelected !important;
+  }
+  .ant-menu-dark {
+    height: ~"calc(100% - 60px)";
+    .ant-menu-item {
+      font-size: @NavFontSize;
+    }
+    .ant-menu-submenu-title {
+      font-size: @NavFontSize;
+    }
+    .ant-menu-submenu-inline .ant-menu-inline {
+      .ant-menu-item a {
+        color: @NavFontSub !important;
+        font-size: @NavFontSize;
+      }
+    }
+    .ant-menu-item .anticon + span,
+    .ant-menu-item .gongdan + span,
+    .ant-menu-submenu-title .anticon + span {
+      font-weight: 700;
+    }
+  }
+}
+.app-body-nav-uncollapsed {
+  .ant-menu-inline.ant-menu-dark > .ant-menu-item {
+    padding-left: 20px !important;
+  }
+  .ant-menu-inline .ant-menu-submenu-title {
+    padding-left: 20px !important;
+  }
+}
+.app-body-nav-collapsed {
+  .ant-menu-inline.ant-menu-dark > .ant-menu-item {
+    padding-left: 18px !important;
+  }
+  .ant-menu-inline .ant-menu-submenu-title {
+    padding-left: 0 !important;
+    a {
+      display: block;
+      padding-left: 18px;
+    }
+    &:after {
+      content: "";
+    }
+  }
+  .ant-menu-submenu-inline .ant-menu-sub {
+    .ant-menu-item {
+      padding-left: 18px !important;
+    }
+  }
+  .ant-menu-inline-collapsed > .ant-menu-item,
+  .ant-menu-inline-collapsed
+    > .ant-menu-item-group
+    > .ant-menu-item-group-list
+    > .ant-menu-item,
+  .ant-menu-inline-collapsed
+    > .ant-menu-item-group
+    > .ant-menu-item-group-list
+    > .ant-menu-submenu
+    > .ant-menu-submenu-title,
+  .ant-menu-inline-collapsed > .ant-menu-submenu > .ant-menu-submenu-title {
+    padding: 0 18px !important;
+  }
+}
+.ant-menu-submenu {
+  .ant-menu-item > a:before {
+    position: absolute;
+    background-color: #354456;
+    top: 50%;
+    left: 24px;
+    margin-top: -3px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+}
+.ant-menu-submenu {
+  .ant-menu-item-selected > a:before,
+  .ant-menu-item-active > a:before {
+    background-color: @white;
+  }
+  .ant-menu-item-active {
+    background: @NavSelected!important;
+  }
+}
+
+.ant-menu-submenu > .ant-menu {
+  border-radius: 0;
+}
+.ant-menu-submenu-popup {
+  left: 50px !important;
+  background: @blackLight;
+  width: 180px;
+  .ant-menu-item {
+    a {
+      text-indent: 26px;
+      color: #d7e5fd !important;
+      &:before {
+        left: 20px;
+      }
+    }
+  }
+  .ant-menu-item-selected {
+    background: @NavSelected!important;
+  }
+}
+.ant-menu-inline > .ant-menu-item,
+.ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-left > .ant-menu-item,
+.ant-menu-vertical-left > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical-right > .ant-menu-item,
+.ant-menu-vertical-right > .ant-menu-submenu > .ant-menu-submenu-title,
+.ant-menu-vertical > .ant-menu-item,
+.ant-menu-vertical > .ant-menu-submenu > .ant-menu-submenu-title {
+  height: 36px;
+  line-height: 36px;
+}
+
+.ant-menu-item-fix {
+  i {
+    margin-right: 8px;
+  }
+  height: 36px;
+  line-height: 36px;
+  color: #a5afbc;
+  padding: 0 16px;
+}
+.pop-menu-first {
+  .ant-menu-item > a:before {
+    position: absolute;
+    background-color: transparent;
+    top: 50%;
+    left: 24px;
+    margin-top: -3px;
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+  }
+}
+.ant-tooltip-inner {
+  background-color: rgba(0, 0, 0, 1) !important;
+}
+
+.themeDefault .app-body-nav .ant-menu-dark .ant-menu-item:hover a {
+  color: #fff !important;
+}
+.themeDefault
+  .app-body-nav
+  .ant-menu-dark
+  .ant-menu-submenu-inline
+  .ant-menu-inline
+  .ant-menu-item:hover
+  a {
+  color: #fff !important;
+}

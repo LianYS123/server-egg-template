@@ -1,0 +1,185 @@
+// 表格调整, 默认用 middle
+@bgHeader: @blueLight;
+@fontSize: 14px;
+
+.ant-table-body {
+  overflow-x: auto;
+}
+.ant-checkbox-checked .ant-checkbox-inner,
+.ant-checkbox-indeterminate .ant-checkbox-inner {
+  background-color: @blueDark;
+  border-color: @blueDark;
+}
+
+.ant-table-thead > tr > th,
+.ant-table-tbody > tr > td {
+  padding: 2px 8px;
+  height: 40px;
+  box-sizing: border-box;
+}
+.ant-table-tbody > .ant-table-expanded-row > td {
+  padding: 16px;
+}
+
+.ant-table-tbody > tr:nth-child(1) > td {
+  border-top: none;
+}
+
+.ant-table-thead > tr > th {
+  word-wrap: break-word;
+}
+.ant-table-thead > tr > th > span {
+  border-right: 1px solid #c4cdd7;
+  width: 100%;
+  display: inline-block;
+  padding-right: 2px;
+}
+.ant-table-thead > tr > th.ant-table-selection-column > span {
+  border-right: 0;
+}
+
+.ant-table-thead > tr > th:last-child > span {
+  border-right: 0;
+}
+
+.ant-table {
+  font-size: 12px;
+  color: #4e5466;
+  .ant-table-thead > tr > th.ant-table-selection-column,
+  .ant-table-tbody > tr > td.ant-table-selection-column {
+    text-align: center;
+    min-width: 48px !important;
+    width: 48px !important;
+  }
+  table {
+    border-radius: 4px 4px 0 0;
+  }
+  table.ant-table-fixed {
+    width: 100% !important;
+    .ant-table-thead {
+      tr > th {
+        border-bottom: none;
+      }
+    }
+  }
+
+  .ant-table-header {
+    background-color: @TableHeadBg;
+  }
+  .ant-table-thead > tr > th {
+    background: @blueLight;
+    color: @gray;
+    white-space: nowrap;
+    box-sizing: border-box;
+    position: relative;
+  }
+}
+
+// 页码
+.ant-pagination {
+  text-align: right;
+  margin-top: 8px;
+  color: @PaginationFont;
+  font-size: @baseFontSize;
+  margin-bottom: 8px;
+  .ant-select-selection-selected-value {
+    color: @PaginationFont;
+    font-size: @baseFontSize;
+  }
+}
+.ant-pagination-item-active {
+  background-color: @BtnColor;
+  border-color: @BtnColor;
+  color: #fff;
+}
+
+//分页的样式重写
+.ant-pagination-prev a,
+.ant-pagination-next a {
+  border: 1px solid @PaginationBorder;
+  font-size: @baseFontSize;
+  border-radius: 4px;
+  outline: 0;
+  display: block;
+  &:after {
+    zoom: 1;
+    display: block;
+    height: 26px;
+    line-height: 26px;
+    font-family: 'anticon';
+    text-align: center;
+    font-weight: 500;
+    font-size: 12px;
+  }
+}
+.ant-pagination-simple .ant-pagination-next a,
+.ant-pagination-simple .ant-pagination-prev a {
+  border: 0;
+  height: 24px;
+  line-height: 24px;
+  margin: 0;
+  font-size: 18px;
+}
+.a() {
+  height: 18px;
+  line-height: 18px;
+  margin: 0;
+  font-size: 18px;
+  outline: 0;
+  display: block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.ant-pagination-item-active {
+  a {
+    color: #fff !important;
+    &:active,
+    &:focus,
+    &:hover,
+    &:visited {
+      color: #fff !important;
+    }
+  }
+}
+
+.a-after() {
+  display: block;
+  font-size: @baseFontSize;
+  zoom: 1;
+  height: 18px;
+  line-height: 18px;
+  font-family: 'anticon';
+  text-align: center;
+  font-weight: 500;
+}
+.ant-pagination-options-size-changer.ant-select {
+  margin-right: 0;
+}
+.ant-pagination-options-quick-jumper {
+  margin-left: 8px;
+}
+
+.ant-table-tbody > tr.ant-table-row-hover > td,
+.ant-table-tbody > tr:hover > td,
+.ant-table-thead > tr.ant-table-row-hover > td,
+.ant-table-thead > tr:hover > td {
+  background: #f5f7fa;
+}
+.ant-table-tbody > tr.ant-table-row-selected td {
+  background: rgba(0, 114, 255, 0.1) !important;
+}
+.ant-table-tbody > tr > td,
+.ant-table-thead > tr > th,
+.ant-table-placeholder {
+  border-bottom: 1px solid @TableBorder;
+}
+.ant-table-placeholder {
+  background: @white;
+}
+.ant-pagination-item,
+.ant-pagination-total-text {
+  margin-right: 2px;
+}
+.ant-pagination-options {
+  margin-left: 2px;
+}
